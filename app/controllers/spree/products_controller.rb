@@ -14,7 +14,7 @@ module Spree
       @taxonomies = Spree::Taxonomy.includes(root: :children)
 
       @products = Spree::Product.search params[:search], 
-      fields: [{name: :word_start}, {machine_models: :word_start}, :token]
+      fields: [{name: :word_start}, {machine_models: :word_start}]
       }
 
       #query = params[:q].presence || "*"
