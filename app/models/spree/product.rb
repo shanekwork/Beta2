@@ -24,12 +24,11 @@ module Spree
     include Elasticsearch::Model
     include Elasticsearch::Model::Callbacks
 
-    searchkick word_start: [:name]
+    searchkick word_start: [:machine_models]
 
 
     def search_data
       {
-        name: name,
         machine_models: machine_models
       }
     end
