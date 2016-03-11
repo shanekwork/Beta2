@@ -13,8 +13,8 @@ Spree.config do |config|
   # Example:
   # Uncomment to stop tracking inventory levels in the application
   # config.track_inventory_levels = false
-  config.logo = "store/Cartridge_Plus_Logo_60px.png"
-  config.admin_interface_logo = "store/Cartridge_Plus_Logo_60px.png"
+  config.logo = "store/logo.png"
+  config.admin_interface_logo = "store/logo.png"
   config.track_inventory_levels = false
   allow_backorder_shipping = true
   config.company = true
