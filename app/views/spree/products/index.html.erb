@@ -15,5 +15,8 @@
 
 
 <% @products.each do |product| %>
-  <%= link_to product.name, product %><br><br>
+  <div>
+    <h3><%= link_to product.name, product %></h3>
+    <p><%= image_tag('http://ts.liveofficedata.co.uk/' + product.image_url %></p>
+  </div>
 <% end %>
