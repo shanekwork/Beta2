@@ -25,6 +25,16 @@ module Spree
     include Elasticsearch::Model::Callbacks
 
     searchkick word_start: [:name]
+
+
+    def search_data
+      {
+        name: name,
+        machine_models: machine_models
+      }
+    end
+
+
     extend FriendlyId
     friendly_id :slug_candidates, use: :history
 
