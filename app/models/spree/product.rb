@@ -21,7 +21,10 @@
 module Spree
   class Product < Spree::Base
 
-    searchkick fields: [:name]
+    include Elasticsearch::Model
+    include Elasticsearch::Model::Callbacks
+
+    searchkick
     extend FriendlyId
     friendly_id :slug_candidates, use: :history
 
