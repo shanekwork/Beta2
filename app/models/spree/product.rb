@@ -21,7 +21,7 @@
 module Spree
   class Product < Spree::Base
 
-    searchkick batch_size: 200
+    searchkick fields: [:name]
     extend FriendlyId
     friendly_id :slug_candidates, use: :history
 
