@@ -24,7 +24,7 @@ module Spree
     include Elasticsearch::Model
     include Elasticsearch::Model::Callbacks
 
-    searchkick word_start: [:machine_models]
+    searchkick
 
 
     def search_data
