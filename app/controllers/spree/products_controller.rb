@@ -12,8 +12,13 @@ module Spree
        #@searcher = build_searcher(params.merge(include_images: true))
       #@products = @searcher.retrieve_products
       @taxonomies = Spree::Taxonomy.includes(root: :children)
-      query = params[:q].presence || "*"
-      @products = Spree::Product.search(query)
+
+      @products = Spree::Product.search params[:search], 
+      fields: [{name: :word_start}, {machine_models: :word_start}, :token]
+      }
+
+      #query = params[:q].presence || "*"
+      #@products = Spree::Product.search(query)
     end
 
     def show
