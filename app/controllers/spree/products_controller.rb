@@ -12,7 +12,7 @@ module Spree
        #@searcher = build_searcher(params.merge(include_images: true))
       #@products = @searcher.retrieve_products
       @taxonomies = Spree::Taxonomy.includes(root: :children)
-      query = params[:q].presence || "*"
+      query = Spree::Product.search fields: [:name]
       @products = Spree::Product.search(query)
     end
 
