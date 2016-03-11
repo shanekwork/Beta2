@@ -2,12 +2,19 @@
 
 <% @taxons = @taxon && @taxon.parent ? @taxon.parent.children : Spree::Taxon.roots %>
 
+<%= form_tag spree.products_path, :method => :get, class: "navbar-form" do %>
+  
+  <div class="form-group">
+    <%= search_field_tag :keywords, params[:keywords], :placeholder => Spree.t(:search), class: "form-control" %>
+  </div>
+  <%= submit_tag Spree.t(:search), :name => nil, class: "btn btn-success" %>
+<% end %>
 
 
-<%= form_tag products_path, method: :get, class: "navbar-form" do %>
-<div class="form-group">
-	<%= text_field_tag :q, nil, placeholder: 'Search', class: "form-control" %>
-</div>
-	<%= submit_tag Spree.t(:search), :name => nil, class: "btn btn-success" %>
+<h2>New Search</h2>
+
+<%= form_tag products_path, method: :get do %>
+
+	<%= text_field_tag :q, nil, placeholder: 'Search' %>
 	
 <% end %>
