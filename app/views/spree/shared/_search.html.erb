@@ -4,8 +4,9 @@
 
 
 
-<%= form_tag products_path, method: :get do %>
 
-	<%= text_field_tag :q, nil, placeholder: 'Search' %>
-	
+<%= form_tag products_path, method: :get, class: "navbar-form" do %>
+<div class="form-group">
+	<%= text_field_tag :q, nil, placeholder: 'Search', class: "form-control" %>
+</div>
 <% end %>
