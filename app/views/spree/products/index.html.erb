@@ -1,4 +1,4 @@
-
+<% @add = Spree::Product.find_by(name: "customer-address") %>
 
 <% if "spree/products" == params[:controller] && @taxon || !@taxonomies.empty? %>
   <% content_for :sidebar do %>
