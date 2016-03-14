@@ -14,29 +14,31 @@
 
 
 
-<% @products.each do |product| %>
+<% if @products.empty? %>
 
-  <% if product.any? %>
+  <h3>Sorry there are no results for that search</h3>
 
-  <div style="border: 1px groove #999; border-radius: 5px;" class="row">
-    <div class="col-md-3">
-      <%= image_tag('http://ts.liveofficedata.co.uk/' + product.image_url) %>
-    </div>
-    <div class="col-md-5">
-      <h3><%= link_to product.name, product %></h3>
-      <p>€<%= product.price %></p>
-    </div>
-    <div class="col-md-4">
-      <h3>Machine Fits</h3>
-      <p><%= product.machine_models %></p>
-    </div>
-  </div>
-  <div style="clear:both;height:30px;"></div>
+<% else %>
 
-  <% else %>
-  
-    <h3>Sorry there are no results for that search</h3>
-  
+  <% @products.each do |product| %>
+    <div style="border: 1px groove #999; border-radius: 5px;" class="row">
+      <div class="col-md-3">
+        <%= image_tag('http://ts.liveofficedata.co.uk/' + product.image_url) %>
+      </div>
+      <div class="col-md-5">
+        <h3><%= link_to product.name, product %></h3>
+        <p>€<%= product.price %></p>
+      </div>
+      <div class="col-md-4">
+        <h3>Machine Fits</h3>
+        <p><%= product.machine_models %></p>
+      </div>
+    </div>
+    <div style="clear:both;height:30px;"></div>
   <% end %>
 
 <% end %>
+
+
+
+
