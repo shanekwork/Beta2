@@ -16,8 +16,8 @@
 
 <% @products.each do |product| %>
 
-  <% if product.count > 0 %>
-  
+  <% if product.any? %>
+
   <div style="border: 1px groove #999; border-radius: 5px;" class="row">
     <div class="col-md-3">
       <%= image_tag('http://ts.liveofficedata.co.uk/' + product.image_url) %>
