@@ -38,9 +38,5 @@ gem 'rails_12factor', group: :production
 
 gem "searchkick"
 
-gem 'elasticsearch-model'
-gem 'elasticsearch-rails'
-gem 'bonsai-elasticsearch-rails'
-
 ruby "2.2.3"
 
