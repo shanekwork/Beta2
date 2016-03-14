@@ -15,13 +15,16 @@
 
 
 <% @products.each do |product| %>
-  <div style="border: 1px groove #999; border-radius: 30px;" class="row">
+  <div style="border: 1px groove #999; border-radius: 5px;" class="row">
     <div class="col-md-3">
       <%= image_tag('http://ts.liveofficedata.co.uk/' + product.image_url) %>
     </div>
     <div class="col-md-5">
       <h3><%= link_to product.name, product %></h3>
       <p>€<%= product.price %></p>
+      <div id="cart-form" data-hook="cart_form">
+            <%= render :partial => 'cart_form' %>
+          </div>
     </div>
     <div class="col-md-4">
       <h3>Machine Fits</h3>
