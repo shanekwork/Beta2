@@ -15,7 +15,7 @@
 <style>.red {font-weight: bold;color: red !important;}</style>
 
 
-<h2>You searched for <b>"<%= highlight('You searched for: rails', ['for', 'rails'], :highlighter => '<em>\1</em>') %>"</b></h2><br><br>
+<h2>You searched for <b>"<%= highlight(content.body, @query.split) %>"</b></h2><br><br>
 
 <% if @products.empty? %>
 
