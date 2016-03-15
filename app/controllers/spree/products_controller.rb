@@ -13,8 +13,8 @@ module Spree
       #@products = @searcher.retrieve_products
       @taxonomies = Spree::Taxonomy.includes(root: :children)
 
-      query = params[:q].presence || "*"
-      @products = Spree::Product.search(query, fields: [:name, :machine_models])
+      @query = params[:q].presence || "*"
+      @products = Spree::Product.search(@query, fields: [:name, :machine_models])
     end
 
     def show
