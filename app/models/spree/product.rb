@@ -20,7 +20,7 @@
 
 module Spree
   class Product < Spree::Base
-    searchkick
+    searchkick highlight: [:name, :machine_models]
     include Elasticsearch::Model
     include Elasticsearch::Model::Callbacks
 
