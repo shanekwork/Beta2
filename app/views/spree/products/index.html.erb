@@ -12,6 +12,18 @@
   <% end %>
 <% end %>
 
+<style>.red {color: red !important}</style>
+<script>
+  var yourstring="<%= @query %>";
+
+$('a:contains('+yourstring+')', document.body).each(function(){
+      $(this).html($(this).html().replace(
+            new RegExp(yourstring, 'g'), '<span class=red>'+yourstring+'</span>'
+      ));
+});
+</script>
+
+
 <h2>You searched for <b>"<%= @query %>"</b></h2><br><br>
 
 <% if @products.empty? %>
