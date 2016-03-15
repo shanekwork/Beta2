@@ -11,8 +11,8 @@
     </div>
   <% end %>
 <% end %>
-
-
+<style>.red {font-weight: bold;color: red !important;}</style>
+<script>$('a:contains("<%= @query %>")').addClass('red')</script>
 <h2>You searched for <b>"<%= @query %>"</b></h2><br><br>
 
 <% if @products.empty? %>
