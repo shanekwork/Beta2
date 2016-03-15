@@ -15,7 +15,7 @@
 <style>.red {font-weight: bold;color: red !important;}</style>
 
 
-<h2>You searched for <b>"<%= highlight(@products.description, params[:q]) %>"</b></h2><br><br>
+<h2>You searched for <b>"<%= highlight(@products.description, @query) %>"</b></h2><br><br>
 
 <% if @products.empty? %>
 
