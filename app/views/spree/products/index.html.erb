@@ -13,7 +13,7 @@
 <% end %>
 
 
-<h2>You searched for <b>"<%= highlight(post.post_content, @query.split) %>"</b></h2><br><br>
+<h2>You searched for <b>"<%= highlight(@query, @query.split) %>"</b></h2><br><br>
 
 <% if @products.empty? %>
 
