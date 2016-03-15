@@ -14,7 +14,7 @@ module Spree
       @taxonomies = Spree::Taxonomy.includes(root: :children)
 
       @query = params[:q].presence || "*"
-      @products = Spree::Product.search(@query, fields: [:name, :machine_models], highlight: true)
+      @products = Spree::Product.search(@query, fields: [:name, :machine_models], highlight: {tag: "<strong>"})
     end
 
     def show
