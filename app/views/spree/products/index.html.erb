@@ -14,7 +14,7 @@
 
 <style>.red {color: red !important}</style>
 <script>
-  var yourstring="<%= @query %>";
+  var yourstring=<%= @query %>;
 
 $('a:contains('+yourstring+')', document.body).each(function(){
       $(this).html($(this).html().replace(
