@@ -24,7 +24,7 @@ module Spree
     include Elasticsearch::Model
     include Elasticsearch::Model::Callbacks
 
-    searchkick
+    #searchkick
 
 
     def search_data
