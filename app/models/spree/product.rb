@@ -20,18 +20,18 @@
 
 module Spree
   class Product < Spree::Base
-
+    searchkick
     include Elasticsearch::Model
     include Elasticsearch::Model::Callbacks
 
-    searchkick
+    
 
 
-    def search_data
-      {
-        machine_models: machine_models
-      }
-    end
+    #def search_data
+      #{
+        #machine_models: machine_models
+      #}
+    #end
 
 
     extend FriendlyId
