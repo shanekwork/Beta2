@@ -40,9 +40,20 @@
     </div>
     
 
-    <script>$('a:contains("<%= @query %>")').addClass('red')</script>
-
     
-    <script>$('p:contains("<%= @query %>")').addClass('red')</script>
+
+    <script>
+      $("a:contains('<%= @query %>')").html(function(_, html) {
+        return html.split('<%= @query %>').join("<span class='red'><%= @query %></span>");
+      });
+    </script>
+
+    <script>
+      $("p:contains('<%= @query %>')").html(function(_, html) {
+        return html.split('<%= @query %>').join("<span class='red'><%= @query %></span>");
+      });
+    </script>
+    
+    
   </body>
 </html>
