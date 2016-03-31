@@ -2,7 +2,7 @@
 	<div class="container">
 		<i class="fa fa-phone"></i>
 		Call us <%= @add.phone %>
-    <% if current_user.admin? %>
+    <% if spree_current_user.admin? %>
       <%= link_to "http://beta2.herokuapp.com/admin" %>
     <% end %>
 	</div>
