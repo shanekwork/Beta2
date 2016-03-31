@@ -2,7 +2,7 @@
 	<div class="container">
 		<i class="fa fa-phone"></i>
 		Call us <%= @add.phone %>
-    <% if spree_current_user.has_role? 'admin' %>
+    <% if user.admin? %>
       
     <% end %>
 	</div>
