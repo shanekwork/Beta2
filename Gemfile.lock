@@ -1,14 +1,4 @@
 GIT
-  remote: git://github.com/elasticsearch/elasticsearch-rails.git
-  revision: a714d5931182501531d2ce6b767bcb3c97ce56a7
-  specs:
-    elasticsearch-model (0.1.8)
-      activesupport (> 3)
-      elasticsearch (> 0.4)
-      hashie
-    elasticsearch-rails (0.1.8)
-
-GIT
   remote: git://github.com/spree-contrib/spree_mail_settings.git
   revision: 99af7e4a137ac76fe4e93b1c8e5a38d81583904c
   branch: 3-0-stable
@@ -332,6 +322,10 @@ GEM
     sdoc (0.4.1)
       json (~> 1.7, >= 1.7.7)
       rdoc (~> 4.0)
+    searchkick (1.2.0)
+      activemodel
+      elasticsearch (>= 1)
+      hashie
     seed_dump (3.2.4)
       activerecord (>= 4)
       activesupport (>= 4)
@@ -445,8 +439,6 @@ DEPENDENCIES
   byebug
   carrierwave (~> 0.10.0)
   coffee-rails (~> 4.1.0)
-  elasticsearch-model!
-  elasticsearch-rails!
   fog (~> 1.24.0)
   font-awesome-rails
   jbuilder (~> 2.0)
@@ -458,6 +450,7 @@ DEPENDENCIES
   s3
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
+  searchkick
   seed_dump
   spree (= 3.0.4)
   spree_auth_devise!
