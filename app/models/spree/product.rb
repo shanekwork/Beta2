@@ -21,8 +21,8 @@
 module Spree
   class Product < Spree::Base
     searchkick
-    include Elasticsearch::Model
-    include Elasticsearch::Model::Callbacks
+    #include Elasticsearch::Model
+    #include Elasticsearch::Model::Callbacks
 
     
 
