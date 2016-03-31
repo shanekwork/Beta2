@@ -26,11 +26,7 @@
   <% @products.each do |product| %>
     <div style="border: 1px groove #999; border-radius: 5px;" class="row">
       <div class="col-md-3">
-        <% if product.image_url.blank? %>
-          "No Image"
-        <% else %>
-          <%= image_tag('http://ts.liveofficedata.co.uk/' + product.image_url) %>
-        <% end %>
+          <%= image_tag('http://ts.liveofficedata.co.uk/' + product.image_url), class: 'target_image' %>
       </div>
 
       <div class="col-md-5">
@@ -47,6 +43,17 @@
 
 <% end %>
 
+<style>.hideIt {display: none !important;}</style>
+<script>
+  $(document).ready(function() {
+  var img = $('.target_image');//jQuery id selector
 
+  var width = img.width(); //jQuery width method
+
+  if(width < 50px){
+     img.addClass('hideIt');
+  }
+  });
+</script>
 
 
