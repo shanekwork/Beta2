@@ -211,6 +211,10 @@ img.greyLogo {
 	max-width: 11.2em;
 }
 
+.version {
+	color: #555 !important;
+}
+
 
 
 form#contact_newsletter fieldset {
