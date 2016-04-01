@@ -39,6 +39,10 @@
     *zoom: 1;
 }
 
+.admin_section {
+	color: #fff;
+}
+
 hr.sale {
     padding: 0;
     border: none;

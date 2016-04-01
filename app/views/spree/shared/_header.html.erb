@@ -9,7 +9,7 @@
    <div class="col-md-2">
     <% if spree_current_user %>
       <% if spree_current_user.has_spree_role?("admin") %>
-        <%= link_to "Admin", admin_path %>
+        <%= link_to "Admin Backend", admin_path, class: 'admin_section' %>
       <% end %>
     <% end %>
     </div>
