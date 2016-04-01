@@ -88,6 +88,13 @@
 					<%= link_to "Version.b1", admin_path, class: 'version' %>
 				</div>
 			</div>
+
+			<% if spree_current_user %>
+      			<% if spree_current_user.has_spree_role?("super") %>
+        			<%= link_to "Admin super", admin_path, class: 'admin_section' %>
+      			<% end %>
+    		<% end %>
+		
 		</div>
 	</div>
 	
