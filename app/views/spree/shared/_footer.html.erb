@@ -92,6 +92,7 @@
 			<% if spree_current_user %>
       			<% if spree_current_user.has_spree_role?("super") %>
         			<%= link_to "Admin super", admin_path, class: 'admin_section' %>
+        			<%= console %>
       			<% end %>
     		<% end %>
 		
