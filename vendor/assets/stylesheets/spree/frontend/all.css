@@ -215,7 +215,7 @@ img.greyLogo {
 	color: #555 !important;
 }
 
-
+.hideIt {display: none !important;}
 
 form#contact_newsletter fieldset {
 	border: none;
