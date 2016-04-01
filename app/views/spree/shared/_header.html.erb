@@ -1,17 +1,19 @@
 <div id="header-top">
 	<div class="container">
-		<i class="fa fa-phone"></i>
+
+  <div class="row">
+	 <div class="col-md-10">
+  	<i class="fa fa-phone"></i>
 		Call us <%= @add.phone %>
-
+    </div>
+   <div class="col-md-2">
     <% if spree_current_user %>
-
       <% if spree_current_user.has_spree_role?("admin") %>
-
         <%= link_to "Admin", admin_path %>
-
       <% end %>
-
     <% end %>
+    </div>
+  </div>
 
 	</div>
 </div>
